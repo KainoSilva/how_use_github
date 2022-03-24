@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    label {
+      display: inline-block;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="login-form" action="https://fom.in.ua/echo" method="POST">
+    <fieldset>
+      <legend>Регистрация</legend>
+
+      <label for="f_name">Имя:</label>
+      <input type="text" id="f_name" name="fname"><br><br>
+
+      <label for="l_name">Фамилия:</label>
+      <input type="text" id="l_name" name="lname"><br><br>
+
+      <label for="f_name">Отчество</label>
+      <input type="text" id="f_name" name="fname"><br><br>
+
+      <label for="phone">Номер телефона:</label>
+      <input type="tel" id="phone" name="phnumber" placeholder="+380XXXXXXXXX"><br><br>
+
+      <label for="mail">E-mail:</label>
+      <input type="email" id="mail" name="email" placeholder="example@example.com"><br><br>
+
+      <label for="pass">Пароль:</label>
+      <input type="password" id="pass" name="pass"><br><br>
+
+      <label for="pass2">Повторите пароль:</label>
+      <input type="password" id="pass2" name="pass2"><br><br>
+
+      <label>
+        <input type="checkbox" name="checked">Я принимаю условия пользовательского соглашения
+      </label><br><br>
+
+      <label>
+        <input type="submit" value="Продолжить">
+      </label>
+
+      <label>
+        <input type="reset" value="Сбросить">
+      </label>
+    </fieldset>
+  </form>
+</body>
+
+</html>

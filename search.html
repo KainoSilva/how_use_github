@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <form id="search-form" action="https://fom.in.ua/echo" method="GET">
+    <h1>Поиск</h1>
+    <fieldset>
+
+      Тип транспорта:
+
+      <select name="type_transp">
+        <option value="0">Все типы транспорта</option>
+        <option value="1" selected>Легковые</option>
+        <option value="2">Мото</option>
+        <option value="3">Грузовые</option>
+        <option value="4">Прицепы</option>
+        <option value="5">Спецтехника</option>
+        <option value="6">Сельхозтехника</option>
+        <option value="7">Автобусы</option>
+        <option value="8">Водный транспорт</option>
+        <option value="9">Воздушный транспорт</option>
+        <option value="10">Дома на колёсах</option>
+      </select>
+    </fieldset><br>
+
+    <fieldset>
+
+      Тип кузова:<br>
+
+      <label>
+        <input type="checkbox" name="body_style[]" value="sedan">Седан
+      </label>
+      <label>
+        <input type="checkbox" name="body_style[]" value="universal">Универсал
+      </label>
+      <label>
+        <input type="checkbox" name="body_style[]" value="hatchback">Хэтчбек
+      </label>
+      <label>
+        <input type="checkbox" name="body_style[]" value="crossover">Кроссовер
+      </label>
+      <label>
+        <input type="checkbox" name="body_style[]" value="cupe">Купе
+      </label>
+      <label>
+        <input type="checkbox" name="body_style[]" value="cabrio">Кабриолет
+      </label>
+      <label>
+        <input type="checkbox" name="body_style[]" value="minivan">Минивен
+      </label>
+      <label>
+        <input type="checkbox" name="body_style[]" value="pickup">Пикап
+      </label>
+      <label>
+        <input type="checkbox" name="body_style[]" value="limousine">Лимузин
+      </label>
+    </fieldset><br>
+
+    <fieldset>
+
+      Страна производитель:
+
+      <select name="country">
+        <option value="not_selected" selected>Выберите страну</option>
+        <option value="jp">Япония</option>
+        <option value="de">Германия</option>
+        <option value="it">Италия</option>
+        <option value="es">Испания</option>
+      </select>
+    </fieldset><br>
+
+    <fieldset>
+
+      Марка:
+
+      <select name="brand">
+        <option value="none" selected>Выберите марку</option>
+        <option value="nissan">Nissan</option>
+        <option value="toyota">Toyota</option>
+        <option value="honda">Honda</option>
+        <option value="subaru">Subaru</option>
+        <option value="mazda">Mazda</option>
+        <option value="bmw">BMW</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="volkswagen">Volkswagen</option>
+        <option value="porsche">Porsche</option>
+        <option value="lamborgini">Lamborghini</option>
+        <option value="ferrari">Ferrari</option>
+      </select>
+
+      Модель:
+
+      <select name="model" multiple>
+        <option value="none2" selected>Выберите модель</option>
+        <optgroup label="Nissan">
+          <option value="Nis1">Skyline</option>
+          <option value="Nis2">Silvia</option>
+          <option value="Nis3">Laurel</option>
+          <option value="Nis4">350Z</option>
+          <option value="Nis5">Cube</option>
+          <option value="Nis6">Leaf</option>
+          <option value="Nis7">GT-R</option>
+          <option value="Nis8">Rogue</option>
+        </optgroup>
+
+        <optgroup label="Toyota">
+          <option value="Toy1">Supra</option>
+          <option value="Toy2">MarkII</option>
+          <option value="Toy3">GT-86</option>
+          <option value="Toy4">Trueno</option>
+          <option value="Toy5">Levin</option>
+          <option value="Toy6">Celica</option>
+          <option value="Toy7">Camry</option>
+          <option value="Toy8">Land Cruiser</option>
+        </optgroup>
+
+        <optgroup label="Honda">
+          <option value="Hon1">Civic</option>
+          <option value="Hon2">S2000</option>
+          <option value="Hon3">Accord</option>
+          <option value="Hon4">Legend</option>
+          <option value="Hon5">Prelude</option>
+          <option value="Hon6">NSX</option>
+          <option value="Hon7">Jazz</option>
+          <option value="Hon8">Integra</option>
+        </optgroup>
+
+        <optgroup label="Subaru">
+          <option value="Sub1">Forester</option>
+          <option value="Sub2">BRZ</option>
+          <option value="Sub3">Impreza WRX STI</option>
+          <option value="Sub4">Legacy</option>
+          <option value="Sub5">Outback</option>
+          <option value="Sub6">Leone</option>
+        </optgroup>
+
+        <optgroup label="Mazda">
+          <option value="Maz1">RX-7</option>
+          <option value="Maz2">RX-8</option>
+          <option value="Maz3">MX-5</option>
+          <option value="Maz4">Cosmo</option>
+          <option value="Maz5">Luce</option>
+          <option value="Maz6">323</option>
+          <option value="Maz7">626</option>
+          <option value="Maz8">929</option>
+        </optgroup>
+
+        <optgroup label="BMW">
+          <option value="BMW1">X Series</option>
+          <option value="BMW2">7 Series</option>
+          <option value="BMW3">3 Series</option>
+          <option value="BMW4">5 Series</option>
+          <option value="BMW5">M Series</option>
+          <option value="BMW6">Alpina</option>
+          <option value="BMW7">X5 M</option>
+          <option value="BMW8">I8</option>
+        </optgroup>
+
+        <optgroup label="Mercedes">
+          <option value="Merc1">A-Class</option>
+          <option value="Merc2">C-Class</option>
+          <option value="Merc3">E-Class</option>
+          <option value="Merc4">G-Class</option>
+          <option value="Merc5">S-Class</option>
+          <option value="Merc6">E 63 AMG</option>
+          <option value="Merc7">S 63 AMG</option>
+          <option value="Merc8">G 63 AMG</option>
+        </optgroup>
+
+        <optgroup label="Volkswagen">
+          <option value="Volk1">Golf</option>
+          <option value="Volk2">Passat</option>
+          <option value="Volk3">CC</option>
+          <option value="Volk4">Jetta</option>
+          <option value="Volk5">Polo</option>
+          <option value="Volk6">Touareg</option>
+          <option value="Volk7">Tiguan</option>
+          <option value="Volk8">Touran</option>
+        </optgroup>
+
+        <optgroup label="Porsche">
+          <option value="Pors1">911</option>
+          <option value="Pors2">918 Spyder</option>
+          <option value="Pors3">944</option>
+          <option value="Pors4">Cayenne</option>
+          <option value="Pors5">Cayman</option>
+          <option value="Pors6">Macan</option>
+          <option value="Pors7">Taycan</option>
+          <option value="Pors8">Panamera</option>
+        </optgroup>
+
+        <optgroup label="Lamborgini">
+          <option value="Lambo1">Aventador</option>
+          <option value="Lambo2">Countach</option>
+          <option value="Lambo3">Diablo</option>
+          <option value="Lambo4">Gallardo</option>
+          <option value="Lambo5">Huracan</option>
+          <option value="Lambo6">Murcielago</option>
+          <option value="Lambo7">Urus</option>
+          <option value="Lambo8">Sesto Elemento</option>
+        </optgroup>
+
+        <optgroup label="Ferrari">
+          <option value="Fer1">250 GTO</option>
+          <option value="Fer2">458 Italia</option>
+          <option value="Fer3">488 Spider</option>
+          <option value="Fer4">F40</option>
+          <option value="Fer5">LaFerrari</option>
+          <option value="Fer6">Enzo</option>
+          <option value="Fer7">Portofino</option>
+          <option value="Fer8">Testarossa</option>
+        </optgroup>
+      </select>
+
+      Год Выпуска:
+
+      <select name="year">
+        <option value="0">Год, от</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+        <option value="2012">2012</option>
+        <option value="2011">2011</option>
+        <option value="2010">2010</option>
+        <option value="2009">2009</option>
+        <option value="2008">2008</option>
+        <option value="2007">2007</option>
+        <option value="2006">2006</option>
+        <option value="2005">2005</option>
+        <option value="2004">2004</option>
+        <option value="2003">2003</option>
+        <option value="2002">2002</option>
+        <option value="2001">2001</option>
+        <option value="2000">2000</option>
+        <option value="1999">1999</option>
+        <option value="1998">1998</option>
+        <option value="1997">1997</option>
+        <option value="1996">1996</option>
+        <option value="1995">1995</option>
+        <option value="1994">1994</option>
+        <option value="1993">1993</option>
+        <option value="1992">1992</option>
+        <option value="1991">1991</option>
+      </select>
+
+      <select name="year">
+        <option value="0">Год, до</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+        <option value="2012">2012</option>
+        <option value="2011">2011</option>
+        <option value="2010">2010</option>
+        <option value="2009">2009</option>
+        <option value="2008">2008</option>
+        <option value="2007">2007</option>
+        <option value="2006">2006</option>
+        <option value="2005">2005</option>
+        <option value="2004">2004</option>
+        <option value="2003">2003</option>
+        <option value="2002">2002</option>
+        <option value="2001">2001</option>
+        <option value="2000">2000</option>
+        <option value="1999">1999</option>
+        <option value="1998">1998</option>
+        <option value="1997">1997</option>
+        <option value="1996">1996</option>
+        <option value="1995">1995</option>
+        <option value="1994">1994</option>
+        <option value="1993">1993</option>
+        <option value="1992">1992</option>
+        <option value="1991">1991</option>
+      </select>
+    </fieldset><br>
+
+    <fieldset>
+
+      Цена:
+
+      <input type="number" name="price_from" placeholder="От">
+      <input type="number" name="price_to" placeholder="До">
+    </fieldset><br>
+
+    <fieldset>
+
+      Состояние:
+
+      <br>
+      <label>
+        <input type="checkbox" name="damage[]" value="broken">Битая
+      </label>
+      <label>
+        <input type="checkbox" name="damage[]" value="credit">В кредит
+      </label>
+      <label>
+        <input type="checkbox" name="damage[]" value="cleared">Растаможена
+      </label>
+      <label>
+        <input type="checkbox" name="damage[]" value="not_cleared">Не растаможена
+      </label>
+      <label>
+        <input type="checkbox" name="damage[]" value="order">Под заказ
+      </label><br>
+      <label>
+        <input type="checkbox" name="damage[]" value="new">Новый автомобиль
+      </label>
+      <label>
+        <input type="checkbox" name="damage[]" value="used">Б/у
+      </label>
+      <label>
+        <input type="checkbox" name="damage[]" value="garage">Гаражное хранение
+      </label>
+    </fieldset><br>
+
+    <fieldset>
+
+      Тип топлива:
+
+      <label>
+        <input type="checkbox" name="fuel[]" value="petrol">Бензин
+      </label>
+      <label>
+        <input type="checkbox" name="fuel[]" value="diesel">Дизель
+      </label>
+      <label>
+        <input type="checkbox" name="fuel[]" value="electro">Електро
+      </label>
+      <label>
+        <input type="checkbox" name="fuel[]" value="hybrid">Гибрид
+      </label>
+      <label>
+        <input type="checkbox" name="fuel[]" value="gas">Газ
+      </label>
+    </fieldset><br>
+
+    <fieldset>
+
+      Тип коробки передач:
+
+      <label>
+        <input type="checkbox" name="gearbox[]" value="mech">Ручная/Механика
+      </label>
+      <label>
+        <input type="checkbox" name="gearbox[]" value="auto">Автомат
+      </label>
+      <label>
+        <input type="checkbox" name="gearbox[]" value="tiptronic">Типтроник
+      </label>
+      <label>
+        <input type="checkbox" name="gearbox[]" value="robot">Робот
+      </label>
+      <label>
+        <input type="checkbox" name="gearbox[]" value="variable">Вариатор
+      </label>
+    </fieldset><br>
+
+    <fieldset>
+
+      <label>Цвет:
+        <input type="color" name="color">
+      </label>
+
+    </fieldset><br>
+
+    <fieldset>
+
+      Комфорт:
+
+      <br>
+      <label>
+        <input type="checkbox" name="comfort[]" value="tuning">Тюнинг
+      </label>
+      <label>
+        <input type="checkbox" name="comfort[]" value="conditioner">Кондиционер
+      </label>
+      <label>
+        <input type="checkbox" name="comfort[]" value="elec_pack">Электропакет
+      </label>
+      <label>
+        <input type="checkbox" name="comfort[]" value="luke">Люк
+      </label><br>
+      <label>
+        <input type="checkbox" name="comfort[]" value="leather">Кожаный салон
+      </label>
+      <label>
+        <input type="checkbox" name="comfort[]" value="wheel_heating">Обогрев руля
+      </label>
+      <label>
+        <input type="checkbox" name="comfort[]" value="parktronic">Парктроник
+      </label>
+      <label>
+        <input type="checkbox" name="comfort[]" value="cruise_control">Круиз контроль
+      </label>
+    </fieldset>
+
+    <input type="submit" value="Поиск">
+
+    <input type="reset" value="Сбросить">
+  </form>
+</body>
+
+</html>
